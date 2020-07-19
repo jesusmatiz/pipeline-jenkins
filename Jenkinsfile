@@ -1,18 +1,22 @@
 node {
    
-    stage('Clone sources') {
+    stage('Clone recursos') {
         git url: 'https://github.com/jfrogdev/project-examples.git'
     }
 
-    stage('Artifactory configuration') {
-        echo "Configurando artefacto"
+    stage('Construyendo proyecto') {
+        echo "Construyendo proyecto"
     }
 
-    stage('Gradle build') {
-        echo "Construyendo gradle"
+    stage('Generando pruebas') {
+        echo "Probando codigo"
     }
 
-    stage('Publish build info') {
-        echo "Pulbicando proyecto"
+    stage('SonarQube') {
+        echo "Probando con SonarQube"
+    }
+
+    stage('Despliegue') {
+        echo "Desplegando proyecto"
     }
 }
